@@ -1,0 +1,4 @@
+{
+  "name": "schlager-poker-party",
+  "main": "party/index.ts"
+}
