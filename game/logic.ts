@@ -139,15 +139,18 @@ export const gameUpdater = (
                 case 1:
                     console.log(`Advancing to next stage`)
                     state.round++;
+                    // @ts-ignore
                     state.tableCards = state.deck.takeCards(3);
                     state.users.forEach((user) => {
-                        user.player.getHand().addCardsToBottom(state.tableCards)
+                        // @ts-ignore
+                        user.player.getHand().addCardsToBottom(state.tableCards) 
                     });
                     break;
                 case 2:
                     console.log(`Advancing to next stage`)
                     state.round++;
                     const fourthCard = state.deck.takeCard();
+                    // @ts-ignore
                     state.tableCards.push(fourthCard);
                     state.users.forEach((user) => {
                         user.player.getHand().addCardsToBottom([fourthCard])
@@ -157,6 +160,7 @@ export const gameUpdater = (
                     console.log(`Advancing to next stage`)
                     state.round++;
                     const fifthCard = state.deck.takeCard();
+                    // @ts-ignore
                     state.tableCards.push(fifthCard);
                     state.users.forEach((user) => {
                         user.player.getHand().addCardsToBottom([fifthCard])
